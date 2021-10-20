@@ -144,9 +144,9 @@ FROM emp;
 
 25)if there is a hike in monthly salary by 20% for ford, what will be his annual Salary
 
-SELECT
-(SAL+SAL*0.2)*12 AS 'ANNUAL SAL AFTER 20% MONTHLY HIKE'
-FROM EMP;
+SELECT ENAME,SAL+(SAL*20/100) AS'MONTHLY HIKE',(SAL+(SAL*20/100))*12 AS 'ANNUAL SALARY'
+FROM EMP
+WHERE ENAME='FORD';
 
 26)What is the total salary for each department
 
